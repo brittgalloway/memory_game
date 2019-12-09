@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "brittney",
+    "img": "%PUBLIC_URL%/images/brittney.webp"
+  },
+  {
+    "id": 2,
+    "name": "crystal",
+    "img": "images/crystal.webp"
+  },
+
+  { "id": 3, "name": "damhan1", "img": "images/damhan1.webp" },
+
+  { "id": 4, "name": "damhan2", "img": "images/damhan2.webp" },
+
+  { "id": 5, "name": "felicity1", "img": "images/felicity1.webp" },
+
+  { "id": 6, "name": "felicity2", "img": "images/felicity2.webp" },
+
+  { "id": 7, "name": "harmony1", "img": "images/harmony1.webp" },
+
+  { "id": 8, "name": "harmony2", "img": "images/harmony2.webp" },
+
+  { "id": 9, "name": "joy1", "img": "images/joy1.webp" },
+
+  { "id": 10, "name": "joy2", "img": "images/joy2.webp" },
+
+  { "id": 11, "name": "love1", "img": "images/love1.webp" },
+
+  { "id": 12, "name": "love2", "img": "images/love2.webp" },
+
+  { "id": 13, "name": "nirvana1", "img": "images/nirvana1.webp" },
+
+  { "id": 14, "name": "nirvana2", "img": "images/nirvana2.webp" },
+
+  {
+    "id": 15,
+    "name": "tranquility1",
+    "img": "images/tranquility1.webp"
+  },
+
+  { "id": 16, "name": "tranquility2", "img": "images/tranquility2.webp" }
+]
