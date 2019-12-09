@@ -6,7 +6,8 @@ function Image(props) {
       <div className="box" >
         <figure>
         
-          <img src={process.env.PUBLIC_URL +`${props.img}`} alt={props.name}/>
+          {/* <img src={process.env.PUBLIC_URL +`${props.img}`} alt={props.name}/> */}
+          <img src={props.img} alt={props.name}/>
         </figure>
 
       </div>
