@@ -1,15 +1,12 @@
-import React from 'react';
+import React from "react";
 
 function Image(props) {
   return (
     <div className="column is-one-quarter">
-      <div className="box" >
+      <div className="box">
         <figure>
-        
-          {/* <img src={process.env.PUBLIC_URL +`${props.img}`} alt={props.name}/> */}
-          <img src={props.img} alt={props.name}/>
+          <img src={props.img} alt={props.name} />
         </figure>
-
       </div>
     </div>
   );
