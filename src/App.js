@@ -4,37 +4,49 @@ import images from "./images.json";
 
 class App extends Component {
   state = {
-    images
+    images,
+    score: 0,
+    topScore: 0
   };
   //on click shuffle cards
   //check for true(clicked) false(if not yet clicked)
   //if false when clicked, turn true
   //if true when clicked, you lose, score is pushed to Top Score Array
+  // handleClick = () => {
+  //   this.setState({
+  //     isClicked: true
+  //   });
 
-  handleOnClick = event => {
-    event.preventDefault();
-    shuffleArray(images);
-  };
-  shuffleArray = array => {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-  };
+  //   shuffleArray(images);
+  // };
+
+  // shuffleArray = imgOrder => {
+  //   let index = imgOrder.length - 1;
+  //   while (index > 0) {
+  //     const randomized = Math.floor(Math.random() * (index + 1));
+  //     const temp = imgOrder[index];
+  //     imgOrder[index] = imgOrder[randomized];
+  //     imgOrder[randomized] = temp;
+  //     index--;
+  //   }
+  //   return imgOrder;
+  // };
+
   render() {
     return (
       <>
-        {this.state.images.map(image => (
-          <section id="images">
-            <div className="columns is-multiline is-mobile">
+        <section id="images">
+          <div className="columns is-multiline is-mobile">
+            {this.state.images.map(image => (
               <Image
-                onChange={this.handleOnClick}
+                key={image.id}
+                id={image.id}
                 img={image.img}
                 name={image.name}
               />
-            </div>
-          </section>
-        ))}
+            ))}
+          </div>
+        </section>
       </>
     );
   }

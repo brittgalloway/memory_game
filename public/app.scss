@@ -13,21 +13,24 @@ $seaGreen: #b6e2d3;
 $cream: #fae8e0;
 $hotPink: #ef7c8e;
 
-nav{
-    padding-left: 10%;
-    .navbar-brand{
-        width: 100%;
-        .title{
-            margin-left: 30%
-        }
-        .subtitle{
-            margin-left: 20%;
-        }
+nav {
+  padding-left: 10%;
+  .navbar-brand {
+    width: 100%;
+    .title {
+      margin-left: 30%;
     }
+    .subtitle {
+      margin-left: 20%;
+    }
+  }
+}
+.box .is-clipped {
+  margin-top: 50px;
 }
 
-#images{
-    width: 60%;
-    margin-left:auto;
-    margin-right:auto;
+#images {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
 }
