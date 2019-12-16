@@ -16,17 +16,18 @@ class App extends Component {
     const { id } = event.target;
 
     const clickedImage = this.state.images.find(img => img.id === parseInt(id));
-
+    //if clickedImage is false
     if (!clickedImage.isClicked) {
+      //switch it to true
       clickedImage.isClicked = true;
-      alert("You clicked " + id);
-
+      //find the images in the array that are not clicked
       const newImgArray = this.state.images.filter(
         img => img.id !== parseInt(id)
       );
+      //insert the clickedImage into the newImgArray
       const updatedArray = [clickedImage, ...newImgArray];
       this.setState({
-        images: updatedArray
+        images: this.shuffleArray(updatedArray)
       });
     }
 
