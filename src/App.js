@@ -14,7 +14,7 @@ class App extends Component {
   //if true when clicked, you lose, score is pushed to Top Score Array
   handleClick = event => {
     const { id } = event.target;
-
+    //find the id of the clicked image
     const clickedImage = this.state.images.find(img => img.id === parseInt(id));
     //if clickedImage is false
     if (!clickedImage.isClicked) {
@@ -26,11 +26,24 @@ class App extends Component {
       );
       //insert the clickedImage into the newImgArray
       const updatedArray = [clickedImage, ...newImgArray];
+      //update score
+      const currentScore = (this.state.score += 1);
+
       this.setState({
-        images: this.shuffleArray(updatedArray)
+        images: this.shuffleArray(updatedArray),
+        score: currentScore
       });
     } else {
       alert("This image was already clicked. You LOSE!");
+      const highestScore = (this.state.topScore = this.state.score);
+
+      // const isClickedReset = images.map(img => (img.isClicked = false));
+
+      this.setState({
+        // images: this.shuffleArray(isClickedReset),
+        score: 0,
+        topScore: highestScore
+      });
     }
   };
 
@@ -49,6 +62,8 @@ class App extends Component {
   render() {
     return (
       <>
+        <p>Score: {this.state.score}</p>
+        <p>Top Score: {this.state.topScore}</p>
         <section id="images">
           <div className="columns is-multiline is-mobile">
             {this.state.images.map(image => (
