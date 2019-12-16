@@ -1,16 +1,13 @@
 import React from "react";
 
-function Image(props) {
+function Image({ img, name, id, handleClick, isClicked }) {
   return (
     <div className="column is-one-quarter">
-      {/* <div onClick={this.handleClick} className="box"> */}
-      <div
-        onClick={() => alert("this will shuffle and keep score at some point!")}
-        className="box"
-      >
+      <div className="box">
         <figure>
-          <img src={props.img} alt={props.name} />
+          <img src={img} alt={name} id={id} onClick={handleClick} />
         </figure>
+        <figcaption>Clicked? {isClicked.toString()}</figcaption>
       </div>
     </div>
   );
