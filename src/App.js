@@ -12,25 +12,38 @@ class App extends Component {
   //check for true(clicked) false(if not yet clicked)
   //if false when clicked, turn true
   //if true when clicked, you lose, score is pushed to Top Score Array
-  // handleClick = () => {
-  //   this.setState({
-  //     isClicked: true
-  //   });
+  handleClick = event => {
+    const { id } = event.target;
 
-  //   shuffleArray(images);
-  // };
+    const clickedImage = this.state.images.find(img => img.id === parseInt(id));
 
-  // shuffleArray = imgOrder => {
-  //   let index = imgOrder.length - 1;
-  //   while (index > 0) {
-  //     const randomized = Math.floor(Math.random() * (index + 1));
-  //     const temp = imgOrder[index];
-  //     imgOrder[index] = imgOrder[randomized];
-  //     imgOrder[randomized] = temp;
-  //     index--;
-  //   }
-  //   return imgOrder;
-  // };
+    if (!clickedImage.isClicked) {
+      clickedImage.isClicked = true;
+      alert("You clicked " + id);
+
+      const newImgArray = this.state.images.filter(
+        img => img.id !== parseInt(id)
+      );
+      const updatedArray = [clickedImage, ...newImgArray];
+      this.setState({
+        images: updatedArray
+      });
+    }
+
+    // shuffleArray(images);
+  };
+
+  shuffleArray = imgArray => {
+    let index = imgArray.length - 1;
+    while (index > 0) {
+      const randomized = Math.floor(Math.random() * (index + 1));
+      const temp = imgArray[index];
+      imgArray[index] = imgArray[randomized];
+      imgArray[randomized] = temp;
+      index--;
+    }
+    return imgArray;
+  };
 
   render() {
     return (
@@ -43,6 +56,8 @@ class App extends Component {
                 id={image.id}
                 img={image.img}
                 name={image.name}
+                handleClick={this.handleClick}
+                isClicked={image.isClicked}
               />
             ))}
           </div>
