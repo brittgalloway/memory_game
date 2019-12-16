@@ -7,7 +7,6 @@ function Image({ img, name, id, handleClick, isClicked }) {
         <figure>
           <img src={img} alt={name} id={id} onClick={handleClick} />
         </figure>
-        <figcaption>Clicked? {isClicked.toString()}</figcaption>
       </div>
     </div>
   );
