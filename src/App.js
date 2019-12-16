@@ -29,9 +29,9 @@ class App extends Component {
       this.setState({
         images: this.shuffleArray(updatedArray)
       });
+    } else {
+      alert("This image was already clicked. You LOSE!");
     }
-
-    // shuffleArray(images);
   };
 
   shuffleArray = imgArray => {
