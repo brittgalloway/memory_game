@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import Nav from "./components/Nav";
 import Image from "./components/Image";
 import images from "./images.json";
+import "./app.css";
 
 class App extends Component {
   state = {
@@ -8,10 +10,7 @@ class App extends Component {
     score: 0,
     topScore: 0
   };
-  //on click shuffle cards
-  //check for true(clicked) false(if not yet clicked)
-  //if false when clicked, turn true
-  //if true when clicked, you lose, score is pushed to Top Score Array
+
   handleClick = event => {
     const { id } = event.target;
     //find the id of the clicked image
@@ -34,13 +33,13 @@ class App extends Component {
         score: currentScore
       });
     } else {
-      alert("This image was already clicked. You LOSE!");
-      const highestScore = (this.state.topScore = this.state.score);
+      this.state.topScore = this.state.score;
+      const highestScore = this.state.topScore;
 
-      // const isClickedReset = images.map(img => (img.isClicked = false));
+      clickedImage.isClicked = false;
 
       this.setState({
-        // images: this.shuffleArray(isClickedReset),
+        images,
         score: 0,
         topScore: highestScore
       });
@@ -62,8 +61,8 @@ class App extends Component {
   render() {
     return (
       <>
-        <p>Score: {this.state.score}</p>
-        <p>Top Score: {this.state.topScore}</p>
+        <Nav score={this.state.score} topScore={this.state.topScore} />
+
         <section id="images">
           <div className="columns is-multiline is-mobile">
             {this.state.images.map(image => (
