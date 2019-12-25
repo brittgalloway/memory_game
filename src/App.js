@@ -34,7 +34,7 @@ class App extends Component {
         images: this.shuffleArray(updatedArray),
         score: currentScore
       });
-      if (this.state.score === 16) {
+      if (this.state.score === 15) {
         alert("you win!");
       }
     } else {
