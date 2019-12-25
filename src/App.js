@@ -40,18 +40,16 @@ class App extends Component {
         this.state.topScore = this.state.score;
         const highestScore = this.state.topScore;
         this.makeFalse();
-
         this.setState({
-          images,
+          images: this.shuffleArray(images),
           score: 0,
           topScore: highestScore
         });
       } else {
         this.makeFalse();
-
         const highestScore = this.state.topScore;
         this.setState({
-          images,
+          images: this.shuffleArray(images),
           score: 0,
           topScore: highestScore
         });
@@ -59,7 +57,7 @@ class App extends Component {
     }
   };
   makeFalse = function() {
-    const clickedImages = this.state.images.map(img => {
+    this.state.images.map(img => {
       if (img.isClicked === true) {
         img.isClicked = false;
       }
