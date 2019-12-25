@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 import Image from "./components/Image";
+// import Modal from "./components/Modal";
 import images from "./images.json";
 import "./app.css";
 
@@ -56,7 +58,7 @@ class App extends Component {
       }
     }
   };
-  makeFalse = function() {
+  makeFalse = () => {
     this.state.images.map(img => {
       if (img.isClicked === true) {
         img.isClicked = false;
@@ -79,22 +81,25 @@ class App extends Component {
   render() {
     return (
       <>
+        {/* <Modal /> */}
         <Nav score={this.state.score} topScore={this.state.topScore} />
-
-        <section id="images">
-          <div className="columns is-multiline is-mobile">
-            {this.state.images.map(image => (
-              <Image
-                key={image.id}
-                id={image.id}
-                img={image.img}
-                name={image.name}
-                handleClick={this.handleClick}
-                isClicked={image.isClicked}
-              />
-            ))}
-          </div>
-        </section>
+        <div className="container">
+          <section id="images">
+            <div className="columns is-multiline is-mobile">
+              {this.state.images.map(image => (
+                <Image
+                  key={image.id}
+                  id={image.id}
+                  img={image.img}
+                  name={image.name}
+                  handleClick={this.handleClick}
+                  isClicked={image.isClicked}
+                />
+              ))}
+            </div>
+          </section>
+        </div>
+        <Footer />
       </>
     );
   }
