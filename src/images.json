@@ -81,12 +81,5 @@
     "name": "tranquility1",
     "img": "images/tranquility1.webp",
     "isClicked": false
-  },
-
-  {
-    "id": 16,
-    "name": "tranquility2",
-    "img": "images/tranquility2.webp",
-    "isClicked": false
   }
 ]
