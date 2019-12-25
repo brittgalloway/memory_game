@@ -7,7 +7,8 @@ function Image({ img, name, id, handleClick, isClicked }) {
         <figure>
           <img src={img} alt={name} id={id} onClick={handleClick} />
         </figure>
-        <p>{isClicked.toString()}</p>
+        {/* for testing */}
+        {/* <p>{isClicked.toString()}</p> */}
       </div>
     </div>
   );
