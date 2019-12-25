@@ -1,21 +1,36 @@
-  <nav
-        class="navbar is-fixed-top"
+import React from "react";
+import "../../app.css";
+function Nav({ score, topScore }) {
+  return (
+    <>
+      <nav
+        className="navbar is-fixed-top"
         role="navigation"
         aria-label="main navigation"
       >
-        <div class="navbar-brand">
-          <a class="navbar-item" href="#">
+        <div className="navbar-brand">
+          <a className="navbar-item" href="https://sleepygallows.com/">
             <img
-              src="public\images\sg_logo.webp"
-              alt="Bulma: Free, open source, and modern CSS framework based on Flexbox"
+              src={process.env.PUBLIC_URL + "/images/sg_logo.webp"}
+              alt="Sleepy Gallows Logo"
             />
           </a>
 
-          <h1 class="title is-1 navbar-item">
-            Memory Game
-          </h1>
-          <h2 class="subtitle navbar-item ">
-            Score:0 | Top Score:0
+          <h1 className="title is-1 navbar-item">Memory Game</h1>
+          <h2 className="subtitle navbar-item ">
+            Score:{score} | Top Score:{topScore}
           </h2>
         </div>
       </nav>
+      <section>
+        <img
+          id="headImg"
+          alt="plh cover"
+          src={process.env.PUBLIC_URL + "/images/plhGame.svg"}
+        />
+      </section>
+    </>
+  );
+}
+
+export default Nav;
