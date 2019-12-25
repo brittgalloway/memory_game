@@ -32,20 +32,40 @@ class App extends Component {
         images: this.shuffleArray(updatedArray),
         score: currentScore
       });
+      if (this.state.score === 16) {
+        alert("you win!");
+      }
     } else {
-      this.state.topScore = this.state.score;
-      const highestScore = this.state.topScore;
+      if (this.state.topScore < this.state.score) {
+        this.state.topScore = this.state.score;
+        const highestScore = this.state.topScore;
+        this.makeFalse();
 
-      clickedImage.isClicked = false;
+        this.setState({
+          images,
+          score: 0,
+          topScore: highestScore
+        });
+      } else {
+        this.makeFalse();
 
-      this.setState({
-        images,
-        score: 0,
-        topScore: highestScore
-      });
+        const highestScore = this.state.topScore;
+        this.setState({
+          images,
+          score: 0,
+          topScore: highestScore
+        });
+      }
     }
   };
-
+  makeFalse = function() {
+    const clickedImages = this.state.images.map(img => {
+      if (img.isClicked === true) {
+        img.isClicked = false;
+      }
+      return img.isClicked;
+    });
+  };
   shuffleArray = imgArray => {
     let index = imgArray.length - 1;
     while (index > 0) {
