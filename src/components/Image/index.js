@@ -1,6 +1,6 @@
 import React from "react";
 
-function Image({ img, name, id, handleClick, isClicked }) {
+function Image({ img, name, id, handleClick }) {
   return (
     <div className="column is-one-quarter">
       <div className="box">
