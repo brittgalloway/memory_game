@@ -11873,6 +11873,10 @@ nav .navbar-brand .subtitle {
   margin-left: 20%;
 }
 
+section {
+  padding-top: 1em;
+}
+
 section #headImg {
   padding-top: 60px;
 }

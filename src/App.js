@@ -11,6 +11,7 @@ class App extends Component {
     images,
     score: 0,
     topScore: 0,
+    // popup: "modal",
   };
 
   handleClick = (event) => {
@@ -35,9 +36,13 @@ class App extends Component {
       this.setState({
         images: this.shuffleArray(updatedArray),
         score: currentScore,
+        // popup: "modal",
       });
       if (this.state.score === 15) {
         alert("you win!");
+        // this.setState({
+        //   popup: "modal is-active",
+        // });
       }
     } else {
       if (this.state.topScore < this.state.score) {
@@ -48,6 +53,7 @@ class App extends Component {
           images: this.shuffleArray(images),
           score: 0,
           topScore: highestScore,
+          // popup: "modal",
         });
       } else {
         this.makeFalse();
@@ -56,6 +62,7 @@ class App extends Component {
           images: this.shuffleArray(images),
           score: 0,
           topScore: highestScore,
+          // popup: "modal",
         });
       }
     }
@@ -83,11 +90,11 @@ class App extends Component {
   render() {
     return (
       <>
-        {/* <Modal /> */}
         <Nav score={this.state.score} topScore={this.state.topScore} />
         <div className="container">
           <section id="images">
             <div className="columns is-multiline is-mobile">
+              {/* <Modal/> */}
               {this.state.images.map((image) => (
                 <Image
                   key={image.id}

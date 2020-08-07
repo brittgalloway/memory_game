@@ -1,11 +1,11 @@
 import React from "react";
 
-function Modal() {
+function Modal({ popup }) {
   return (
-    <div className="modal ">
+    <div className={popup}>
       <div className="modal-background"></div>
       <div className="modal-content">
-        <figure className="image is-128by128">
+        <figure className="image">
           <img
             src={process.env.PUBLIC_URL + "/images/victoryScreen1x1.webp"}
             alt="The Knight"
