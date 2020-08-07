@@ -3510,9 +3510,328 @@ fieldset[disabled] .button {
   width: 128px;
 }
 
+.notification {
+  background-color: whitesmoke;
+  border-radius: 4px;
+  padding: 1.25rem 2.5rem 1.25rem 1.5rem;
+  position: relative;
+}
 
+.notification a:not(.button):not(.dropdown-item) {
+  color: currentColor;
+  text-decoration: underline;
+}
 
+.notification strong {
+  color: currentColor;
+}
 
+.notification code,
+.notification pre {
+  background: white;
+}
+
+.notification pre code {
+  background: transparent;
+}
+
+.notification > .delete {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+}
+
+.notification .title,
+.notification .subtitle,
+.notification .content {
+  color: currentColor;
+}
+
+.notification.is-white {
+  background-color: white;
+  color: #0a0a0a;
+}
+
+.notification.is-black {
+  background-color: #0a0a0a;
+  color: white;
+}
+
+.notification.is-light {
+  background-color: whitesmoke;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.notification.is-dark {
+  background-color: #363636;
+  color: #fff;
+}
+
+.notification.is-primary {
+  background-color: #00d1b2;
+  color: #fff;
+}
+
+.notification.is-link {
+  background-color: #3273dc;
+  color: #fff;
+}
+
+.notification.is-info {
+  background-color: #3298dc;
+  color: #fff;
+}
+
+.notification.is-success {
+  background-color: #48c774;
+  color: #fff;
+}
+
+.notification.is-warning {
+  background-color: #ffdd57;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.notification.is-danger {
+  background-color: #f14668;
+  color: #fff;
+}
+
+.progress {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  border-radius: 290486px;
+  display: block;
+  height: 1rem;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+}
+
+.progress::-webkit-progress-bar {
+  background-color: #ededed;
+}
+
+.progress::-webkit-progress-value {
+  background-color: #4a4a4a;
+}
+
+.progress::-moz-progress-bar {
+  background-color: #4a4a4a;
+}
+
+.progress::-ms-fill {
+  background-color: #4a4a4a;
+  border: none;
+}
+
+.progress.is-white::-webkit-progress-value {
+  background-color: white;
+}
+
+.progress.is-white::-moz-progress-bar {
+  background-color: white;
+}
+
+.progress.is-white::-ms-fill {
+  background-color: white;
+}
+
+.progress.is-white:indeterminate {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(30%, white), color-stop(30%, #ededed));
+  background-image: linear-gradient(to right, white 30%, #ededed 30%);
+}
+
+.progress.is-black::-webkit-progress-value {
+  background-color: #0a0a0a;
+}
+
+.progress.is-black::-moz-progress-bar {
+  background-color: #0a0a0a;
+}
+
+.progress.is-black::-ms-fill {
+  background-color: #0a0a0a;
+}
+
+.progress.is-black:indeterminate {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(30%, #0a0a0a), color-stop(30%, #ededed));
+  background-image: linear-gradient(to right, #0a0a0a 30%, #ededed 30%);
+}
+
+.progress.is-light::-webkit-progress-value {
+  background-color: whitesmoke;
+}
+
+.progress.is-light::-moz-progress-bar {
+  background-color: whitesmoke;
+}
+
+.progress.is-light::-ms-fill {
+  background-color: whitesmoke;
+}
+
+.progress.is-light:indeterminate {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(30%, whitesmoke), color-stop(30%, #ededed));
+  background-image: linear-gradient(to right, whitesmoke 30%, #ededed 30%);
+}
+
+.progress.is-dark::-webkit-progress-value {
+  background-color: #363636;
+}
+
+.progress.is-dark::-moz-progress-bar {
+  background-color: #363636;
+}
+
+.progress.is-dark::-ms-fill {
+  background-color: #363636;
+}
+
+.progress.is-dark:indeterminate {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(30%, #363636), color-stop(30%, #ededed));
+  background-image: linear-gradient(to right, #363636 30%, #ededed 30%);
+}
+
+.progress.is-primary::-webkit-progress-value {
+  background-color: #00d1b2;
+}
+
+.progress.is-primary::-moz-progress-bar {
+  background-color: #00d1b2;
+}
+
+.progress.is-primary::-ms-fill {
+  background-color: #00d1b2;
+}
+
+.progress.is-primary:indeterminate {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(30%, #00d1b2), color-stop(30%, #ededed));
+  background-image: linear-gradient(to right, #00d1b2 30%, #ededed 30%);
+}
+
+.progress.is-link::-webkit-progress-value {
+  background-color: #3273dc;
+}
+
+.progress.is-link::-moz-progress-bar {
+  background-color: #3273dc;
+}
+
+.progress.is-link::-ms-fill {
+  background-color: #3273dc;
+}
+
+.progress.is-link:indeterminate {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(30%, #3273dc), color-stop(30%, #ededed));
+  background-image: linear-gradient(to right, #3273dc 30%, #ededed 30%);
+}
+
+.progress.is-info::-webkit-progress-value {
+  background-color: #3298dc;
+}
+
+.progress.is-info::-moz-progress-bar {
+  background-color: #3298dc;
+}
+
+.progress.is-info::-ms-fill {
+  background-color: #3298dc;
+}
+
+.progress.is-info:indeterminate {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(30%, #3298dc), color-stop(30%, #ededed));
+  background-image: linear-gradient(to right, #3298dc 30%, #ededed 30%);
+}
+
+.progress.is-success::-webkit-progress-value {
+  background-color: #48c774;
+}
+
+.progress.is-success::-moz-progress-bar {
+  background-color: #48c774;
+}
+
+.progress.is-success::-ms-fill {
+  background-color: #48c774;
+}
+
+.progress.is-success:indeterminate {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(30%, #48c774), color-stop(30%, #ededed));
+  background-image: linear-gradient(to right, #48c774 30%, #ededed 30%);
+}
+
+.progress.is-warning::-webkit-progress-value {
+  background-color: #ffdd57;
+}
+
+.progress.is-warning::-moz-progress-bar {
+  background-color: #ffdd57;
+}
+
+.progress.is-warning::-ms-fill {
+  background-color: #ffdd57;
+}
+
+.progress.is-warning:indeterminate {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(30%, #ffdd57), color-stop(30%, #ededed));
+  background-image: linear-gradient(to right, #ffdd57 30%, #ededed 30%);
+}
+
+.progress.is-danger::-webkit-progress-value {
+  background-color: #f14668;
+}
+
+.progress.is-danger::-moz-progress-bar {
+  background-color: #f14668;
+}
+
+.progress.is-danger::-ms-fill {
+  background-color: #f14668;
+}
+
+.progress.is-danger:indeterminate {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(30%, #f14668), color-stop(30%, #ededed));
+  background-image: linear-gradient(to right, #f14668 30%, #ededed 30%);
+}
+
+.progress:indeterminate {
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: moveIndeterminate;
+          animation-name: moveIndeterminate;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  background-color: #ededed;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(30%, #4a4a4a), color-stop(30%, #ededed));
+  background-image: linear-gradient(to right, #4a4a4a 30%, #ededed 30%);
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: 150% 150%;
+}
+
+.progress:indeterminate::-webkit-progress-bar {
+  background-color: transparent;
+}
+
+.progress:indeterminate::-moz-progress-bar {
+  background-color: transparent;
+}
+
+.progress.is-small {
+  height: 0.75rem;
+}
+
+.progress.is-medium {
+  height: 1.25rem;
+}
+
+.progress.is-large {
+  height: 1.5rem;
+}
 
 @-webkit-keyframes moveIndeterminate {
   from {
@@ -7863,6 +8182,239 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   }
 }
 
+.panel {
+  border-radius: 6px;
+  -webkit-box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
+          box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
+  font-size: 1rem;
+}
+
+.panel:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.panel.is-white .panel-heading {
+  background-color: white;
+  color: #0a0a0a;
+}
+
+.panel.is-white .panel-tabs a.is-active {
+  border-bottom-color: white;
+}
+
+.panel.is-white .panel-block.is-active .panel-icon {
+  color: white;
+}
+
+.panel.is-black .panel-heading {
+  background-color: #0a0a0a;
+  color: white;
+}
+
+.panel.is-black .panel-tabs a.is-active {
+  border-bottom-color: #0a0a0a;
+}
+
+.panel.is-black .panel-block.is-active .panel-icon {
+  color: #0a0a0a;
+}
+
+.panel.is-light .panel-heading {
+  background-color: whitesmoke;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.panel.is-light .panel-tabs a.is-active {
+  border-bottom-color: whitesmoke;
+}
+
+.panel.is-light .panel-block.is-active .panel-icon {
+  color: whitesmoke;
+}
+
+.panel.is-dark .panel-heading {
+  background-color: #363636;
+  color: #fff;
+}
+
+.panel.is-dark .panel-tabs a.is-active {
+  border-bottom-color: #363636;
+}
+
+.panel.is-dark .panel-block.is-active .panel-icon {
+  color: #363636;
+}
+
+.panel.is-primary .panel-heading {
+  background-color: #00d1b2;
+  color: #fff;
+}
+
+.panel.is-primary .panel-tabs a.is-active {
+  border-bottom-color: #00d1b2;
+}
+
+.panel.is-primary .panel-block.is-active .panel-icon {
+  color: #00d1b2;
+}
+
+.panel.is-link .panel-heading {
+  background-color: #3273dc;
+  color: #fff;
+}
+
+.panel.is-link .panel-tabs a.is-active {
+  border-bottom-color: #3273dc;
+}
+
+.panel.is-link .panel-block.is-active .panel-icon {
+  color: #3273dc;
+}
+
+.panel.is-info .panel-heading {
+  background-color: #3298dc;
+  color: #fff;
+}
+
+.panel.is-info .panel-tabs a.is-active {
+  border-bottom-color: #3298dc;
+}
+
+.panel.is-info .panel-block.is-active .panel-icon {
+  color: #3298dc;
+}
+
+.panel.is-success .panel-heading {
+  background-color: #48c774;
+  color: #fff;
+}
+
+.panel.is-success .panel-tabs a.is-active {
+  border-bottom-color: #48c774;
+}
+
+.panel.is-success .panel-block.is-active .panel-icon {
+  color: #48c774;
+}
+
+.panel.is-warning .panel-heading {
+  background-color: #ffdd57;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.panel.is-warning .panel-tabs a.is-active {
+  border-bottom-color: #ffdd57;
+}
+
+.panel.is-warning .panel-block.is-active .panel-icon {
+  color: #ffdd57;
+}
+
+.panel.is-danger .panel-heading {
+  background-color: #f14668;
+  color: #fff;
+}
+
+.panel.is-danger .panel-tabs a.is-active {
+  border-bottom-color: #f14668;
+}
+
+.panel.is-danger .panel-block.is-active .panel-icon {
+  color: #f14668;
+}
+
+.panel-tabs:not(:last-child),
+.panel-block:not(:last-child) {
+  border-bottom: 1px solid #ededed;
+}
+
+.panel-heading {
+  background-color: #ededed;
+  border-radius: 6px 6px 0 0;
+  color: #363636;
+  font-size: 1.25em;
+  font-weight: 700;
+  line-height: 1.25;
+  padding: 0.75em 1em;
+}
+
+.panel-tabs {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.875em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.panel-tabs a {
+  border-bottom: 1px solid #dbdbdb;
+  margin-bottom: -1px;
+  padding: 0.5em;
+}
+
+.panel-tabs a.is-active {
+  border-bottom-color: #4a4a4a;
+  color: #363636;
+}
+
+.panel-list a {
+  color: #4a4a4a;
+}
+
+.panel-list a:hover {
+  color: #3273dc;
+}
+
+.panel-block {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #363636;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0.5em 0.75em;
+}
+
+.panel-block input[type="checkbox"] {
+  margin-right: 0.75em;
+}
+
+.panel-block > .control {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  width: 100%;
+}
+
+.panel-block.is-wrapped {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.panel-block.is-active {
+  border-left-color: #3273dc;
+  color: #363636;
+}
+
+.panel-block.is-active .panel-icon {
+  color: #3273dc;
+}
+
+.panel-block:last-child {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
 
 a.panel-block,
 label.panel-block {
@@ -11297,6 +11849,47 @@ label.panel-block:hover {
 .footer {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem;
+}
+
+body {
+  padding-top: 40px;
+}
+
+nav {
+  color: #d8a7b1;
+  margin-bottom: 50px;
+  padding-left: 3%;
+}
+
+nav .navbar-brand {
+  width: 100%;
+}
+
+nav .navbar-brand .title {
+  margin-left: 30%;
+}
+
+nav .navbar-brand .subtitle {
+  margin-left: 20%;
+}
+
+section #headImg {
+  padding-top: 60px;
+}
+
+#images {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+figure {
+  cursor: pointer;
+}
+
+.box:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 @keyframes spinAround {
@@ -15146,32 +15739,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
     padding: 9rem 1.5rem;
   }
   .section.is-large {
-    padding: 16rem 1.5rem;
+    padding: 18rem 1.5rem;
   }
-}
-body {
-  padding-top: 100px;
-}
-nav {
-  padding-left: 3%;
-}
-
-nav .navbar-brand {
-  width: 100%;
-  height:100px;
-}
-
-nav .navbar-brand .title {
-  margin-left: 30%;
-}
-
-nav .navbar-brand .subtitle {
-  margin-left: 20%;
-}
-
-#images {
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
 }
 /*# sourceMappingURL=app.css.map */

@@ -6,7 +6,7 @@ function Footer() {
       <div className="content has-text-centered">
         <p>
           <strong>Brittney Galloway</strong> |
-          <a href="https://sleepygallows.com/for-peace-love-and-harmony">
+          <a href="https://sleepygallows.com/Animation/originals/plh">
             For Peace, Love, and Harmony
           </a>
           | Made with REACT

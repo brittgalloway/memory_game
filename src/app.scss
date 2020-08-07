@@ -15,7 +15,6 @@ nav {
   .navbar-brand {
     width: 100%;
     .title {
-      color: $softPink;
       margin-left: 30%;
     }
     .subtitle {
@@ -34,7 +33,14 @@ section {
   margin-left: auto;
   margin-right: auto;
 }
-
+figure {
+  cursor: pointer;
+}
+.box {
+  &:hover {
+    transform: scale(1.1);
+  }
+}
 @import "../node_modules/bulma/sass/utilities/_all.sass";
 @import "../node_modules/bulma/sass/base/_all.sass";
 @import "../node_modules/bulma/sass/elements/container.sass";

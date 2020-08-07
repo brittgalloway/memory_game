@@ -10,20 +10,22 @@ class App extends Component {
   state = {
     images,
     score: 0,
-    topScore: 0
+    topScore: 0,
   };
 
-  handleClick = event => {
+  handleClick = (event) => {
     const { id } = event.target;
     //find the id of the clicked image
-    const clickedImage = this.state.images.find(img => img.id === parseInt(id));
+    const clickedImage = this.state.images.find(
+      (img) => img.id === parseInt(id)
+    );
     //if clickedImage is false
     if (!clickedImage.isClicked) {
       //switch it to true
       clickedImage.isClicked = true;
       //find the images in the array that are not clicked
       const newImgArray = this.state.images.filter(
-        img => img.id !== parseInt(id)
+        (img) => img.id !== parseInt(id)
       );
       //insert the clickedImage into the newImgArray
       const updatedArray = [clickedImage, ...newImgArray];
@@ -32,7 +34,7 @@ class App extends Component {
 
       this.setState({
         images: this.shuffleArray(updatedArray),
-        score: currentScore
+        score: currentScore,
       });
       if (this.state.score === 15) {
         alert("you win!");
@@ -45,7 +47,7 @@ class App extends Component {
         this.setState({
           images: this.shuffleArray(images),
           score: 0,
-          topScore: highestScore
+          topScore: highestScore,
         });
       } else {
         this.makeFalse();
@@ -53,20 +55,20 @@ class App extends Component {
         this.setState({
           images: this.shuffleArray(images),
           score: 0,
-          topScore: highestScore
+          topScore: highestScore,
         });
       }
     }
   };
   makeFalse = () => {
-    this.state.images.map(img => {
+    this.state.images.map((img) => {
       if (img.isClicked === true) {
         img.isClicked = false;
       }
       return img.isClicked;
     });
   };
-  shuffleArray = imgArray => {
+  shuffleArray = (imgArray) => {
     let index = imgArray.length - 1;
     while (index > 0) {
       const randomized = Math.floor(Math.random() * (index + 1));
@@ -86,7 +88,7 @@ class App extends Component {
         <div className="container">
           <section id="images">
             <div className="columns is-multiline is-mobile">
-              {this.state.images.map(image => (
+              {this.state.images.map((image) => (
                 <Image
                   key={image.id}
                   id={image.id}
