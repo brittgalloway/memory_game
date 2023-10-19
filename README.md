@@ -1,23 +1,46 @@
+
+
 # Memory Game
-[For Peace Love and Harmony](https://sleepygallows.com/plh) themed memory game. 
+
+![Memory Game header](https://github.com/brittgalloway/memory_game/assets/50898741/73e1ae75-78a2-4f55-8832-279de54f09f1)
+
+
+Welcome to the Peace, Love, and Harmony-themed memory game! Test your memory skills by clicking on the images and matching them. Can you uncover all 15 images without clicking the same one twice?
 
 ## How to Play
-- Click on every image once! There are 15 images that shuffle after every click.
-- For every new image clicked, your score increases. If you click the same image twice, the game resets. 
-- Your top score is recorded as long as you stay in the same broswer window.
+
+1. **Click on Every Image**: Your goal is to click on each of the 15 images exactly once.
+2. **Score and Shuffle**: With each new image clicked, your score increases. The images shuffle after every click, so stay sharp!
+3. **Avoid Duplicates**: If you click the same image twice, the game resets, and your score starts from scratch.
+4. **Top Score**: Your top score is recorded as long as you remain in the same browser window.
 
 ## How It's Made
-This memory game was made with React and Bulma UI. 
 
-The images are being reached via the images json and mapped through.
+This memory game was developed using React and the Bulma UI framework. Here's how it works behind the scenes:
 
-On click, the image is givena state of isClicked true. Then its id is sent to an array and the images position is shuffled. If there is a duplicate in the array, the game ends.
+- **React**: The game is built using React, allowing for dynamic rendering and easy management of game state.
 
-When the game ends, there is a final check to see if this was your top score. There is a High score state. if your current score is higher than the stored state, then a new high score is recorded.
+- **Images Data**: The images used in the game are sourced from a JSON file and mapped to create the game's image set.
 
-If you win by getting all 15 images, an alert pops up to congratulate you!
+- **Game Logic**: On each click, the clicked image is given a state of `isClicked: true`. Its unique ID is then added to an array, and the positions of the images are shuffled. If a duplicate is found in the array, the game ends.
 
-<hr>
+- **High Score**: The game keeps track of your high score using a state variable. If your current score surpasses the stored high score, a new high score is recorded.
+
+- **Victory Alert**: If you successfully match all 15 images without clicking any duplicates, a congratulatory alert pops up to celebrate your victory!
+
+### Project Preview
+
+<img width="899" alt="image" src="https://github.com/brittgalloway/memory_game/assets/50898741/73b4d170-d243-4b5d-a966-af91a4d9e1c2">
+
+
+Enjoy this Peace, Love, and Harmony-themed memory game and challenge your memory skills. Can you achieve the ultimate goal of matching all the images and setting a high score to beat?
+
+Have fun and keep those memory cells active!
+
+>NOTE: This game is not mobile responsive
+
+---
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
